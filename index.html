@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Only For You 💖</title>
+
+<style>
+body {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.box {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: 80%;
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 25px;
+    background: #e63946;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+<div class="box">
+    <h2>🔐 Secret Entry</h2>
+    <p>Only someone special knows the password 💕</p>
+    <input type="password" id="pass" placeholder="Enter password">
+    <br>
+    <button onclick="check()">Enter ❤️</button>
+    <div class="error" id="error"></div>
+</div>
+
+<script>
+function check() {
+    if (document.getElementById("pass").value === "motu") {
+        window.location.href = "welcome.html";
+    } else {
+        document.getElementById("error").innerText = "Wrong password 😢";
+    }
+}
+</script>
+</body>
+</html>
