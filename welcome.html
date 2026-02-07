@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Rose Day Jyoti 🌹</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff4d6d, #ffb3c1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.card {
+    background: white;
+    padding: 35px;
+    border-radius: 25px;
+    text-align: center;
+    z-index: 2;
+}
+
+.rose {
+    font-size: 90px;
+    animation: bloom 2s infinite alternate;
+}
+
+.petals {
+    position: absolute;
+    top: -50px;
+    font-size: 25px;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to { transform: translateY(110vh); }
+}
+
+@keyframes bloom {
+    to { transform: scale(1.2); }
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #e63946;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<audio autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="card">
+    <div class="rose">🌹</div>
+    <h2>Happy Rose Day Jyoti 💕</h2>
+    <p>This rose blooms only for my Motu 💖</p>
+    <a href="feelings.html">Next 💌</a>
+</div>
+
+<script>
+for (let i = 0; i < 25; i++) {
+    let petal = document.createElement("div");
+    petal.innerHTML = "🌸";
+    petal.className = "petals";
+    petal.style.left = Math.random() * 100 + "vw";
+    petal.style.animationDuration = (3 + Math.random() * 5) + "s";
+    document.body.appendChild(petal);
+}
+</script>
+
+</body>
+</html>
